@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Básico -->
+    <title>Rakú Herrería | Proyectos a Medida, Rejas, Portones y Muebles en Mar del Plata</title>
+    <meta name="description" content="Rakú Herrería: Proyectos a medida, pérgolas, rejas, portones, bicicleteros, reparaciones a domicilio y muebles en hierro y madera. Consultanos por WhatsApp al 223 577-4095.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome para Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ==========================================================================
+           VARIABLES CSS REUTILIZABLES (NUEVA PALETA: #101318, #1F2A35, #1B6AA5, #94A0AD, #DFE5EB)
+           ========================================================================== */
+        :root {
+            --color-primario: #101318;      /* Negro Azulado Profundo */
+            --color-secundario: #1F2A35;    /* Azul Acero Oscuro */
+            --color-acento: #1B6AA5;        /* Azul Industrial Vibrante */
+            --color-acento-hover: #145282;  /* Azul Industrial Intenso */
+            --color-gris-metal: #94A0AD;    /* Gris Acero Medio */
+            --color-fondo: #DFE5EB;         /* Gris Claro Metálico */
+            --color-blanco: #ffffff;
+            --color-texto: #1F2A35;
+            --color-texto-suave: #475569;
+            
+            /* Tipografías */
+            --fuente-display: 'Bebas Neue', sans-serif;
+            --fuente-titulos: 'Montserrat', sans-serif;
+            --fuente-texto: 'Open Sans', sans-serif;
+            
+            /* Bordes y Sombras */
+            --border-radius: 4px;
+            --shadow-sm: 0 2px 6px rgba(16, 19, 24, 0.08);
+            --shadow-md: 0 6px 16px rgba(16, 19, 24, 0.14);
+            --shadow-lg: 0 12px 28px rgba(16, 19, 24, 0.22);
+            --transition: all 0.3s ease;
+        }
+
+        /* ==========================================================================
+           RESET & ESTILOS GENERALES
+           ========================================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--fuente-texto);
+            color: var(--color-texto);
+            background-color: var(--color-fondo);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--fuente-titulos);
+            font-weight: 800;
+            line-height: 1.2;
+            color: var(--color-primario);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 30px;
+            border-radius: var(--border-radius);
+            font-family: var(--fuente-titulos);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.8px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--color-acento);
+            color: var(--color-blanco);
+            box-shadow: 0 4px 14px rgba(27, 106, 165, 0.35);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-acento-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(27, 106, 165, 0.45);
+        }
+
+        .btn-oscuro {
+            background-color: var(--color-primario);
+            color: var(--color-blanco);
+            border: 1px solid var(--color-secundario);
+        }
+
+        .btn-oscuro:hover {
+            background-color: var(--color-secundario);
+            transform: translateY(-2px);
+        }
+
+        .text-center { text-align: center; }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background-color: rgba(27, 106, 165, 0.12);
+            color: var(--color-acento);
+            border: 1px solid rgba(27, 106, 165, 0.35);
+            border-radius: var(--border-radius);
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title {
+            font-size: 2.3rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            color: var(--color-primario);
+        }
+
+        .section-subtitle {
+            color: var(--color-texto-suave);
+            max-width: 640px;
+            margin: 0 auto 50px auto;
+            font-size: 1.05rem;
+        }
+
+        /* ==========================================================================
+           1. TOP BAR FINA
+           ========================================================================== */
+        .top-bar {
+            background-color: var(--color-primario);
+            color: var(--color-fondo);
+            padding: 9px 0;
+            font-size: 0.85rem;
+            border-bottom: 3px solid var(--color-acento);
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .top-bar-info {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .top-bar-info i {
+            color: var(--color-acento);
+        }
+
+        .top-bar-link {
+            color: var(--color-blanco);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition);
+        }
+
+        .top-bar-link i {
+            color: #25D366;
+            font-size: 1rem;
+        }
+
+        .top-bar-link:hover {
+            color: var(--color-gris-metal);
+        }
+
+        /* ==========================================================================
+           2. HEADER STICKY
+           ========================================================================== */
+        .main-header {
+            position: sticky;
+            top: 0;
+            background-color: var(--color-blanco);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+            border-bottom: 1px solid #cbd5e1;
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 75px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 46px;
+            height: 46px;
+            background-color: var(--color-primario);
+            color: var(--color-acento);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            border-bottom: 3px solid var(--color-acento);
+        }
+
+        .logo-text {
+            font-family: var(--fuente-display);
+            font-size: 1.8rem;
+            letter-spacing: 1.5px;
+            color: var(--color-primario);
+            line-height: 1;
+        }
+
+        .logo-text span {
+            font-family: var(--fuente-titulos);
+            color: var(--color-acento);
+            display: block;
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-link {
+            font-family: var(--fuente-titulos);
+            font-weight: 700;
+            font-size: 0.88rem;
+            color: var(--color-secundario);
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--color-acento);
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--color-primario);
+            cursor: pointer;
+        }
+
+        /* ==========================================================================
+           3. HERO SECTION
+           ========================================================================== */
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--color-blanco) 0%, var(--color-fondo) 100%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-size: 3.1rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: var(--color-primario);
+        }
+
+        .hero-title span {
+            color: var(--color-acento);
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--color-texto-suave);
+            margin-bottom: 30px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 460px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+            border-bottom: 6px solid var(--color-acento);
+        }
+
+        /* ==========================================================================
+           4. SERVICIOS
+           ========================================================================== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .service-card {
+            background-color: var(--color-blanco);
+            border-radius: var(--border-radius);
+            padding: 35px 30px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid #cbd5e1;
+            border-top: 4px solid var(--color-secundario);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-top-color: var(--color-acento);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            background-color: var(--color-secundario);
+            color: var(--color-blanco);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 22px;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background-color: var(--color-acento);
+            color: var(--color-blanco);
+        }
+
+        .service-title {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .service-desc {
+            color: var(--color-texto-suave);
+            font-size: 0.95rem;
+        }
+
+        .guarantee-banner {
+            background-color: var(--color-secundario);
+            color: var(--color-blanco);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            border-left: 6px solid var(--color-acento);
+        }
+
+        .guarantee-banner-text h3 {
+            color: var(--color-blanco);
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .guarantee-banner-text p {
+            color: var(--color-fondo);
+        }
+
+        /* ==========================================================================
+           5. GALERÍA DE TRABAJOS REALIZADOS (FOTOS REALES DEL TALLER)
+           ========================================================================== */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 22px;
+            margin-bottom: 35px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            height: 310px;
+            box-shadow: var(--shadow-md);
+            border: 2px solid var(--color-secundario);
+            background-color: var(--color-primario);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.06);
+            opacity: 0.9;
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(16, 19, 24, 0.92));
+            color: var(--color-blanco);
+            padding: 25px 18px 14px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-bottom: 3px solid var(--color-acento);
+        }
+
+        /* ==========================================================================
+           6. SOBRE NOSOTROS
+           ========================================================================== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            width: 100%;
+            height: 410px;
+            object-fit: cover;
+            border-bottom: 5px solid var(--color-acento);
+        }
+
+        .about-content p {
+            margin-bottom: 15px;
+            color: var(--color-texto-suave);
+        }
+
+        .about-highlight {
+            font-weight: 700;
+            color: var(--color-primario);
+            border-left: 4px solid var(--color-acento);
+            padding: 14px 18px;
+            background-color: rgba(27, 106, 165, 0.1);
+            margin: 20px 0;
+        }
+
+        /* ==========================================================================
+           7. POR QUÉ ELEGIRNOS
+           ========================================================================== */
+        .why-us {
+            background-color: #cfd8e3;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-card {
+            background-color: var(--color-blanco);
+            padding: 30px 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            border-bottom: 3px solid var(--color-acento);
+        }
+
+        .feature-icon {
+            font-size: 2.2rem;
+            color: var(--color-acento);
+            margin-bottom: 15px;
+        }
+
+        .feature-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .feature-desc {
+            font-size: 0.9rem;
+            color: var(--color-texto-suave);
+        }
+
+        /* ==========================================================================
+           8. TESTIMONIOS
+           ========================================================================== */
+        .rating-summary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin: 0 auto 40px auto;
+            background-color: var(--color-blanco);
+            padding: 15px 30px;
+            border-radius: var(--border-radius);
+            width: fit-content;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--color-gris-metal);
+        }
+
+        .stars {
+            color: var(--color-acento);
+            font-size: 1.2rem;
+        }
+
+        .rating-score {
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--color-primario);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-card {
+            background-color: var(--color-blanco);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-left: 4px solid var(--color-acento);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--color-texto-suave);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .author-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: var(--border-radius);
+            background-color: var(--color-secundario);
+            color: var(--color-blanco);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-family: var(--fuente-titulos);
+        }
+
+        .author-info h4 {
+            font-size: 0.95rem;
+            margin-bottom: 2px;
+        }
+
+        .author-info span {
+            font-size: 0.8rem;
+            color: var(--color-texto-suave);
+        }
+
+        /* ==========================================================================
+           9. MAPA EMBEBIDO
+           ========================================================================== */
+        .map-section {
+            line-height: 0;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 360px;
+            border: 0;
+        }
+
+        /* ==========================================================================
+           10. BANNER CTA FINAL
+           ========================================================================== */
+        .final-cta {
+            background: linear-gradient(rgba(16, 19, 24, 0.9), rgba(31, 42, 53, 0.92)), url('herreriaraku_1715553638_3366630390482580740_64697962468.webp');
+            background-size: cover;
+            background-position: center;
+            color: var(--color-blanco);
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            color: var(--color-blanco);
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .final-cta p {
+            font-size: 1.1rem;
+            color: var(--color-fondo);
+            margin-bottom: 30px;
+            max-width: 620px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ==========================================================================
+           11. FOOTER
+           ========================================================================== */
+        .main-footer {
+            background-color: var(--color-primario);
+            color: var(--color-gris-metal);
+            padding-top: 60px;
+            padding-bottom: 20px;
+            font-size: 0.9rem;
+            border-top: 4px solid var(--color-acento);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--color-blanco);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        .footer-col p {
+            margin-bottom: 12px;
+        }
+
+        .footer-col i {
+            color: var(--color-acento);
+            margin-right: 6px;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background-color: var(--color-secundario);
+            color: var(--color-blanco);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--color-acento);
+            color: var(--color-blanco);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+        }
+
+        /* ==========================================================================
+           12. BOTÓN FLOTANTE WHATSAPP CON BURBUJA
+           ========================================================================== */
+        .whatsapp-float-container {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .whatsapp-chat-bubble {
+            background-color: var(--color-blanco);
+            padding: 12px 18px;
+            border-radius: 12px;
+            border-bottom-right-radius: 2px;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+            color: var(--color-primario);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 2px solid var(--color-acento);
+            animation: pulse-bubble 3s infinite;
+        }
+
+        .whatsapp-btn-float {
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: var(--color-blanco);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.45);
+            transition: var(--transition);
+        }
+
+        .whatsapp-btn-float:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse-bubble {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        /* ==========================================================================
+           RESPONSIVE DESIGN
+           ========================================================================== */
+        @media (max-width: 768px) {
+            .hero-grid, .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                font-size: 2.3rem;
+            }
+
+            .hero-image {
+                height: 310px;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-menu {
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 100%;
+                background-color: var(--color-blanco);
+                flex-direction: column;
+                padding: 20px 0;
+                box-shadow: var(--shadow-md);
+                display: none;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .top-bar .container {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .guarantee-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .whatsapp-chat-bubble {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. TOP BAR FINA -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-info">
+                <span><i class="fa-solid fa-fire-flame-curved"></i> Herrería de Obra y Diseño Industrial</span>
+                <span><i class="fa-solid fa-location-dot"></i> Mar del Plata y Zona</span>
+            </div>
+            <a href="https://wa.me/5492235774095?text=Hola%20Rak%C3%BA%20Herrer%C3%ADa,%20quiero%20consultar%20por%20un%20trabajo%20a%20medida" target="_blank" class="top-bar-link">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp: 223 577-4095
+            </a>
+        </div>
+    </div>
+
+    <!-- 2. HEADER STICKY -->
+    <header class="main-header">
+        <div class="container">
+            <a href="#inicio" class="logo-container">
+                <div class="logo-icon"><i class="fa-solid fa-hammer"></i></div>
+                <div class="logo-text">
+                    RAKÚ HERRERÍA
+                    <span>Hierro & Madera a Medida</span>
+                </div>
+            </a>
+            
+            <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú de navegación">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#galeria" class="nav-link">Trabajos</a></li>
+                <li><a href="#sobre-nosotros" class="nav-link">Taller</a></li>
+                <li><a href="#por-que-elegirnos" class="nav-link">Por qué elegirnos</a></li>
+                <li><a href="#testimonios" class="nav-link">Clientes</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 3. HERO SECTION -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="badge">
+                        <i class="fa-solid fa-compass-drafting"></i> Fabricación Propia a Medida
+                    </div>
+                    <h1 class="hero-title">
+                        Rakú <span>Herrería</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Proyectos a medida, pérgolas, rejas, portones, reparaciones a domicilio y muebles exclusivos en hierro y madera. Soldadura estructural y terminaciones de calidad en Mar del Plata.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="https://wa.me/5492235774095?text=Hola%20Rak%C3%BA%20Herrer%C3%ADa,%20me%20gustar%C3%ADa%20pedir%20un%20presupuesto" target="_blank" class="btn btn-primary">
+                            <i class="fa-brands fa-whatsapp"></i> Pedir Presupuesto
+                        </a>
+                        <a href="https://www.instagram.com/herreriaraku/" target="_blank" rel="noopener" class="btn btn-oscuro">
+                            <i class="fa-brands fa-instagram"></i> Ver Instagram
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="herreriaraku_1715553638_3366630390482580740_64697962468.webp" alt="Pérgola moderna en hierro negro y madera realizada por Rakú Herrería" class="hero-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SERVICIOS -->
+    <section id="servicios" class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <p class="section-subtitle">Combinamos resistencia estructural en hierro con diseño funcional para hogares, comercios y obras.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Servicio 1: Proyectos a medida -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-ruler-combined"></i></div>
+                    <h3 class="service-title">Proyectos a Medida</h3>
+                    <p class="service-desc">Diseño y fabricación personalizada según tus planos o ideas: pérgolas con techo de chapa o policarbonato, bicicleteros comerciales, escaleras y cerramientos.</p>
+                </div>
+                <!-- Servicio 2: Rejas, portones y reparaciones -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-dungeon"></i></div>
+                    <h3 class="service-title">Rejas, Portones y Reparaciones</h3>
+                    <p class="service-desc">Seguridad para tu propiedad con rejas de frente y ventana, portones corredizos o de abrir, y servicio de reparaciones y soldadura a domicilio.</p>
+                </div>
+                <!-- Servicio 3: Muebles y puertas hierro/madera -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-couch"></i></div>
+                    <h3 class="service-title">Hierro y Madera</h3>
+                    <p class="service-desc">Mobiliario estilo industrial y aberturas combinadas: mesas, barras, estanterías, racks y puertas con metal desplegado y madera tratada.</p>
+                </div>
+            </div>
+
+            <!-- Banner de Garantía -->
+            <div class="guarantee-banner">
+                <div class="guarantee-banner-text">
+                    <h3>Trabajos Sólidos y Terminaciones Prolijas</h3>
+                    <p>Vamos hasta tu domicilio a tomar medidas y asesorarte sobre los mejores materiales para tu proyecto.</p>
+                </div>
+                <a href="https://wa.me/5492235774095?text=Hola%20Rak%C3%BA%20Herrer%C3%ADa,%20quiero%20coordinar%20una%20visita%20para%20tomar%20medidas" target="_blank" class="btn btn-primary">Coordinar Visita</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. GALERÍA DE TRABAJOS REALIZADOS -->
+    <section id="galeria" class="section-padding" style="background-color: var(--color-blanco);">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Trabajos Realizados</h2>
+                <p class="section-subtitle">Obras reales fabricadas e instaladas por Rakú Herrería en Mar del Plata.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="herreriaraku_1715553638_3366630390482580740_64697962468.webp" alt="Pérgola estructural de hierro negro y madera" loading="lazy">
+                    <div class="gallery-caption">Pérgola en hierro negro y cielorraso de madera</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="herreriaraku_1715554771_3366639893282140143_64697962468.webp" alt="Portón corredizo y reja perimetral negra" loading="lazy">
+                    <div class="gallery-caption">Portón corredizo con lanzas y paño fijo</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="herreriaraku_1727099255_3463482046897550702_64697962468.webp" alt="Puertas dobles en hierro, metal desplegado y madera" loading="lazy">
+                    <div class="gallery-caption">Cerramiento doble en metal desplegado y madera</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="herreriaraku_1712872380_3344138368232249694_64697962468.webp" alt="Montaje de estructura metálica para techo" loading="lazy">
+                    <div class="gallery-caption">Estructura metálica para techo y policarbonato</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="herreriaraku_1713195721_3346850746698751817_64697962468.webp" alt="Bicicletero metálico con cartel comercial" loading="lazy">
+                    <div class="gallery-caption">Bicicletero estructural con cartel superior a medida</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="herreriaraku_1727099579_3463484763967616906_64697962468.webp" alt="Reja horizontal blanca para ventana" loading="lazy">
+                    <div class="gallery-caption">Reja de seguridad horizontal con terminación blanca</div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 30px;">
+                <a href="https://www.instagram.com/herreriaraku/" target="_blank" rel="noopener" class="btn btn-primary">
+                    <i class="fa-brands fa-instagram"></i> Ver más trabajos en @herreriaraku
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SOBRE NOSOTROS -->
+    <section id="sobre-nosotros" class="section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div>
+                    <img src="herreriaraku_1712872380_3344138368232249694_64697962468.webp" alt="Montaje en obra por Rakú Herrería" class="about-image" loading="lazy">
+                </div>
+                <div class="about-content">
+                    <div class="badge"><i class="fa-solid fa-fire"></i> Oficio y Dedicación</div>
+                    <h2 class="section-title">Sobre Rakú Herrería</h2>
+                    <p>En <strong>Rakú Herrería</strong> nos dedicamos a transformar el hierro y la madera en soluciones prácticas, seguras y con carácter propio para cada espacio.</p>
+                    
+                    <div class="about-highlight">
+                        "Cada proyecto se fabrica a medida cuidando las uniones, la resistencia estructural y el acabado final para que dure toda la vida."
+                    </div>
+
+                    <p>Realizamos tanto obras nuevas como reparaciones rápidas a domicilio en Mar del Plata, manteniendo una comunicación directa para cumplir con los tiempos acordados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. POR QUÉ ELEGIRNOS -->
+    <section id="por-que-elegirnos" class="section-padding why-us">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Por Qué Elegirnos</h2>
+                <p class="section-subtitle">Compromiso en cada etapa: desde la medición en obra hasta la colocación final.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 class="feature-title">Resistencia Real</h3>
+                    <p class="feature-desc">Perfiles y materiales de calibre adecuado para garantizar seguridad y firmeza.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                    <h3 class="feature-title">100% a Medida</h3>
+                    <p class="feature-desc">Adaptamos cada reja, portón o mueble exactamente a las dimensiones de tu espacio.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-truck-pickup"></i></div>
+                    <h3 class="feature-title">Servicio a Domicilio</h3>
+                    <p class="feature-desc">Reparaciones en el lugar, ajustes de portones, bisagras y colocación en obra.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-handshake"></i></div>
+                    <h3 class="feature-title">Trato Directo</h3>
+                    <p class="feature-desc">Presupuestos claros y asesoramiento personalizado sin intermediarios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. TESTIMONIOS -->
+    <section id="testimonios" class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Opiniones de Clientes</h2>
+                <p class="section-subtitle">La recomendación de quienes ya equiparon su casa o comercio con Rakú Herrería.</p>
+            </div>
+
+            <div class="rating-summary">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="rating-score">5.0 / 5.0</div>
+                <span style="color: var(--color-texto-suave); font-size: 0.9rem;">(Trabajos garantizados)</span>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Me hicieron el portón corredizo y las rejas del frente. Excelentes terminaciones en la soldadura y la pintura. Cumplieron en fecha."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MF</div>
+                        <div class="author-info">
+                            <h4>Martín F.</h4>
+                            <span>Portón y Rejas a Medida</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Armaron la pérgola de la galería en hierro y madera y quedó espectacular. Súper prolijos para trabajar e instalar."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">LP</div>
+                        <div class="author-info">
+                            <h4>Lucía P.</h4>
+                            <span>Pérgola a Medida</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Vinieron a domicilio a reparar un portón y colocar unas rejas en las ventanas. Rápidos, prolijos y muy buena atención."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RG</div>
+                        <div class="author-info">
+                            <h4>Roberto G.</h4>
+                            <span>Rejas y Reparación</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="https://www.instagram.com/herreriaraku/" target="_blank" rel="noopener" class="btn btn-oscuro">
+                    <i class="fa-brands fa-instagram"></i> Seguinos en Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. MAPA EMBEBIDO (MAR DEL PLATA - CARACTERÍSTICA 223) -->
+    <section class="map-section" id="ubicacion">
+        <iframe 
+            class="map-container"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100570.10660334812!2d-57.63228945!3d-38.0054771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584d94d19d34209%3A0xdd9670804bf1c021!2sMar%20del%20Plata%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Zona de cobertura Rakú Herrería en Mar del Plata">
+        </iframe>
+    </section>
+
+    <!-- 10. BANNER CTA FINAL -->
+    <section id="contacto" class="section-padding final-cta">
+        <div class="container">
+            <h2>¿Tenés un Proyecto en Hierro o Madera?</h2>
+            <p>Mandanos un mensaje con tu idea o las medidas aproximadas y te pasamos un presupuesto sin compromiso.</p>
+            <a href="https://wa.me/5492235774095?text=Hola%20Rak%C3%BA%20Herrer%C3%ADa,%20quiero%20hacer%20una%20consulta%20por%20un%20trabajo" target="_blank" class="btn btn-primary" style="font-size: 1.05rem; padding: 18px 36px;">
+                <i class="fa-brands fa-whatsapp"></i> Escribir por WhatsApp (223 577-4095)
+            </a>
+        </div>
+    </section>
+
+    <!-- 11. FOOTER -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Rakú Herrería</h4>
+                    <p>Taller de herrería artesanal e industrial. Fabricación a medida, aberturas de seguridad, pérgolas, reparaciones y mobiliario en hierro y madera.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Especialidades</h4>
+                    <p><i class="fa-solid fa-check"></i> Proyectos a medida</p>
+                    <p><i class="fa-solid fa-check"></i> Rejas, portones y reparaciones a domicilio</p>
+                    <p><i class="fa-solid fa-check"></i> Muebles en hierro y madera</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto y Redes</h4>
+                    <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: 223 577-4095</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Mar del Plata, Buenos Aires</p>
+                    <div class="footer-socials">
+                        <a href="https://www.instagram.com/herreriaraku/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram Rakú Herrería">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5492235774095" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp Rakú Herrería">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Rakú Herrería (@Herreriaraku). Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 12. BOTÓN FLOTANTE WHATSAPP CON BURBUJA -->
+    <div class="whatsapp-float-container">
+        <div class="whatsapp-chat-bubble">
+            <i class="fa-solid fa-hammer" style="color: var(--color-acento);"></i> ¡Hola! ¿Cotizamos tu proyecto a medida?
+        </div>
+        <a href="https://wa.me/5492235774095?text=Hola%20Rak%C3%BA%20Herrer%C3%ADa,%20quiero%20pedir%20un%20presupuesto" target="_blank" class="whatsapp-btn-float" aria-label="Contactar a Rakú Herrería por WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- JAVASCRIPT VANILLA -->
+    <script>
+        // Año dinámico en footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Menú Mobile Toggle
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = hamburgerBtn.querySelector('i');
+            if(navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Cerrar menú mobile al hacer click en un enlace
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                const icon = hamburgerBtn.querySelector('i');
+                if(icon) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
